@@ -1,0 +1,6 @@
+-- create db and collections
+use order_events;
+db.createCollection("events")
+db.events.createIndex({ "orderId": 1 })
+db.events.createIndex({ "timestamp": 1 })
+db.events.createIndex({ "eventId": 1 }, { unique: true })
